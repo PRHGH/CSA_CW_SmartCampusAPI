@@ -4,6 +4,7 @@
  */
 package com.mycompany.csa_cw_smartcampusapi.resources;
 
+import com.mycompany.csa_cw_smartcampusapi.exceptions.SensorUnavailableException;
 import com.mycompany.csa_cw_smartcampusapi.models.Sensor;
 import com.mycompany.csa_cw_smartcampusapi.service.DataStore;
 import java.util.ArrayList;
@@ -44,9 +45,7 @@ public class SensorReadingResource {
         }
         
         if ("MAINTENANCE".equalsIgnoreCase(sensor.getStatus())) {
-            return Response.status(Response.Status.FORBIDDEN)
-                    .entity("Sensor is under maintenance and cannot accept readings")
-                    .build();
+            throw new SensorUnavailableException("Sensor is under maintenance and cannot accept readings");
         }
         
         DataStore.readings.computeIfAbsent(sensorId, key -> new ArrayList<>()).add(reading);
