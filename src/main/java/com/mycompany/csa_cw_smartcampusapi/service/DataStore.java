@@ -5,6 +5,7 @@
 package com.mycompany.csa_cw_smartcampusapi.service;
 
 import com.mycompany.csa_cw_smartcampusapi.models.Room;
+import com.mycompany.csa_cw_smartcampusapi.models.Sensor;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,4 +16,7 @@ import java.util.Map;
 public class DataStore {
     
     public static Map<String,Room> rooms = new HashMap<>();
+    
+    public static Map<String, Sensor> sensors = new HashMap<>();
+    
 }
