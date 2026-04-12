@@ -4,7 +4,7 @@
  */
 package com.mycompany.csa_cw_smartcampusapi.resources;
 
-import com.mycompany.csa_cw_smartcampusapi.model.DataStore;
+import com.mycompany.csa_cw_smartcampusapi.service.DataStore;
 import com.mycompany.csa_cw_smartcampusapi.models.Room;
 import java.util.HashMap;
 import java.util.Map;
@@ -38,12 +38,12 @@ public class RootResource {
 //        return room;
 //    }
     
-//    @GET
-//    public Object testStore() {
-//        Room room = new Room("B1", "Basketball court one", 200);
-//        
-//        DataStore.rooms.put(room.getId(), room);
-//        
-//        return DataStore.rooms.values();
-//    }
+    @GET
+    public Object testStore() {
+        Room room = new Room("B1", "Basketball court one", 200);
+        
+        DataStore.rooms.put(room.getId(), room);
+        
+        return DataStore.rooms.values();
+    }
 }
