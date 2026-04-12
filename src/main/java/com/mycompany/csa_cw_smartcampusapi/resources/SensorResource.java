@@ -4,6 +4,7 @@
  */
 package com.mycompany.csa_cw_smartcampusapi.resources;
 
+import com.mycompany.csa_cw_smartcampusapi.exceptions.LinkedResourceNotFoundException;
 import com.mycompany.csa_cw_smartcampusapi.models.Room;
 import com.mycompany.csa_cw_smartcampusapi.models.Sensor;
 import com.mycompany.csa_cw_smartcampusapi.service.DataStore;
@@ -44,7 +45,7 @@ public class SensorResource {
         Room room = DataStore.rooms.get(sensor.getRoomId());
         
         if(room == null) {
-            return Response.status(Response.Status.BAD_REQUEST).entity("Referenced room does not exist").build();
+            throw new LinkedResourceNotFoundException("Referenced room does not exist");
         }
         
         DataStore.sensors.put(sensor.getId(), sensor);
