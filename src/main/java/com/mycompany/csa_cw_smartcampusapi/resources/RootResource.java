@@ -4,6 +4,9 @@
  */
 package com.mycompany.csa_cw_smartcampusapi.resources;
 
+import com.mycompany.csa_cw_smartcampusapi.models.Room;
+import java.util.HashMap;
+import java.util.Map;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -14,11 +17,23 @@ import javax.ws.rs.core.MediaType;
  * @author pamin
  */
 @Path("/")
-@Produces(MediaType.TEXT_PLAIN)
+@Produces(MediaType.APPLICATION_JSON)
 public class RootResource {
     
     @GET
-    public String hello() {
-        return "API is working!";
+    public Map<String, Object> getInfo() {
+        
+        Map<String, Object> response = new HashMap<>();
+        response.put("version", "v1");
+        response.put("message", "My Api is Running");
+        response.put("status", "OK");
+        return response;
     } 
+    
+//    @GET
+//    public Room testRoom() {
+//    
+//        Room room = new Room("A1","Arena one", 150);
+//        return room;
+//    }
 }
