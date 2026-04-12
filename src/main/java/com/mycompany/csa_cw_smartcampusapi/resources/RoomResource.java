@@ -4,6 +4,7 @@
  */
 package com.mycompany.csa_cw_smartcampusapi.resources;
 
+import com.mycompany.csa_cw_smartcampusapi.exceptions.RoomNotEmptyException;
 import com.mycompany.csa_cw_smartcampusapi.service.DataStore;
 import com.mycompany.csa_cw_smartcampusapi.models.Room;
 import java.util.Collection;
@@ -55,7 +56,7 @@ public class RoomResource {
         }
         
         if(room.getSensorIds() != null && !room.getSensorIds().isEmpty()) {
-            return Response.status(Response.Status.BAD_REQUEST).entity("Room has sensors, cannot delete").build();
+            throw new RoomNotEmptyException("Room still has assigned sensors");
         }
         
         DataStore.rooms.remove(id);

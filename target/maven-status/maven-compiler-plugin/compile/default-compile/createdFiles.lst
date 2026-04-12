@@ -1,7 +1,11 @@
+com\mycompany\csa_cw_smartcampusapi\resources\SensorReading.class
+com\mycompany\csa_cw_smartcampusapi\exceptions\RoomNotEmptyException.class
+com\mycompany\csa_cw_smartcampusapi\mapper\RoomNotEmptyExceptionMapper.class
 com\mycompany\csa_cw_smartcampusapi\resources\RoomResource.class
 com\mycompany\csa_cw_smartcampusapi\models\Room.class
 com\mycompany\csa_cw_smartcampusapi\service\DataStore.class
 com\mycompany\csa_cw_smartcampusapi\resources\SensorResource.class
 com\mycompany\csa_cw_smartcampusapi\resources\RootResource.class
+com\mycompany\csa_cw_smartcampusapi\resources\SensorReadingResource.class
 com\mycompany\csa_cw_smartcampusapi\config\AppConfig.class
 com\mycompany\csa_cw_smartcampusapi\models\Sensor.class
