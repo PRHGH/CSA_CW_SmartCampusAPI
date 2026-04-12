@@ -43,6 +43,12 @@ public class SensorReadingResource {
             return Response.status(Response.Status.NOT_FOUND).entity("Sensor Not Found").build();
         }
         
+        if ("MAINTENANCE".equalsIgnoreCase(sensor.getStatus())) {
+            return Response.status(Response.Status.FORBIDDEN)
+                    .entity("Sensor is under maintenance and cannot accept readings")
+                    .build();
+        }
+        
         DataStore.readings.computeIfAbsent(sensorId, key -> new ArrayList<>()).add(reading);
         
         sensor.setCurrentValue(reading.getValue());
