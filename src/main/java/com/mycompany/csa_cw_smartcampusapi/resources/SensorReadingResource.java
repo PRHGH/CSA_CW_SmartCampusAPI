@@ -39,6 +39,12 @@ public class SensorReadingResource {
     @POST
     public Response addReading(SensorReading reading) {
         
+        if (reading == null) {
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity("Reading body is missing or invalid")
+                    .build();
+        }
+        
         Sensor sensor = DataStore.sensors.get(sensorId);
         
         if(sensor == null) {

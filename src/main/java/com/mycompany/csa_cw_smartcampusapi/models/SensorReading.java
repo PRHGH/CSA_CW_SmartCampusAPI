@@ -11,14 +11,14 @@ package com.mycompany.csa_cw_smartcampusapi.models;
 public class SensorReading {
     
     private String id;
-    private long timeStamp;
+    private long timestamp;
     private double value;
 
     public SensorReading() {}
 
-    public SensorReading(String id, long timeStamp, double value) {
+    public SensorReading(String id, long timstamp, double value) {
         this.id = id;
-        this.timeStamp = timeStamp;
+        this.timestamp = timestamp;
         this.value = value;
     }
 
@@ -30,12 +30,12 @@ public class SensorReading {
         this.id = id;
     }
 
-    public long getTimeStamp() {
-        return timeStamp;
+    public long getTimestamp() {
+        return timestamp;
     }
 
-    public void setTimeStamp(long timeStamp) {
-        this.timeStamp = timeStamp;
+    public void setTimeStamp(long timestamp) {
+        this.timestamp = timestamp;
     }
 
     public double getValue() {
