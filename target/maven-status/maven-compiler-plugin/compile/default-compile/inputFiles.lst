@@ -1,4 +1,5 @@
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\resources\SensorReading.java
+D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\exceptions\DuplicateResourceException.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\models\Sensor.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\resources\SensorResource.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\exceptions\RoomNotEmptyException.java
@@ -6,7 +7,10 @@ D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\mapper\GlobalExceptionMapper.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\mapper\LinkedResourceNotFoundExceptionMapper.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\service\DataStore.java
+D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\exceptions\ResourceNotFoundException.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\exceptions\LinkedResourceNotFoundException.java
+D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\mapper\DuplicateResourceExceptionMapper.java
+D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\mapper\ResourceNotFoundExceptionMapper.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\mapper\SensorUnavailableExceptionMapper.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\resources\RoomResource.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\models\Room.java
