@@ -40,7 +40,7 @@ public class SensorReadingResource {
         
         Sensor sensor = DataStore.sensors.get(sensorId);
         
-        if(sensorId == null) {
+        if(sensor == null) {
             return Response.status(Response.Status.NOT_FOUND).entity("Sensor Not Found").build();
         }
         
