@@ -63,14 +63,15 @@ public class SensorResource {
     
     @POST
     public Response createSensor(Sensor sensor) {
+        
+        if (DataStore.sensors.containsKey(sensor.getId())) {
+            throw new DuplicateResourceException("Sensor with this ID already exists");
+        }
+        
         Room room = DataStore.rooms.get(sensor.getRoomId());
         
         if(room == null) {
             throw new LinkedResourceNotFoundException("Referenced room does not exist");
-        }
-        
-        if (DataStore.sensors.containsKey(sensor.getId())) {
-            throw new DuplicateResourceException("Sensor with this ID already exists");
         }
         
         DataStore.sensors.put(sensor.getId(), sensor);

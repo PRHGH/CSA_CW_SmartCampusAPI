@@ -9,14 +9,14 @@ package com.mycompany.csa_cw_smartcampusapi.models;
  * @author pamin
  */
 public class SensorReading {
-    
+
     private String id;
     private long timestamp;
     private double value;
 
     public SensorReading() {}
 
-    public SensorReading(String id, long timstamp, double value) {
+    public SensorReading(String id, long timestamp, double value) {
         this.id = id;
         this.timestamp = timestamp;
         this.value = value;
@@ -34,7 +34,7 @@ public class SensorReading {
         return timestamp;
     }
 
-    public void setTimeStamp(long timestamp) {
+    public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
 
