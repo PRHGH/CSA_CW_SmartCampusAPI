@@ -10,6 +10,7 @@ D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\exceptions\ResourceNotFoundException.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\exceptions\LinkedResourceNotFoundException.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\mapper\DuplicateResourceExceptionMapper.java
+D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\filter\LoggingFilter.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\mapper\ResourceNotFoundExceptionMapper.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\mapper\SensorUnavailableExceptionMapper.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\resources\RoomResource.java
@@ -18,4 +19,3 @@ D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\resources\RootResource.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\mapper\RoomNotEmptyExceptionMapper.java
 D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\config\AppConfig.java
-D:\Year 2\client-server\CSA_CW_SmartCampusAPI\src\main\java\com\mycompany\csa_cw_smartcampusapi\mapper\LoggingFilter.java

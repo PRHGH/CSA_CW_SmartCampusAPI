@@ -8,12 +8,12 @@ com\mycompany\csa_cw_smartcampusapi\config\AppConfig.class
 com\mycompany\csa_cw_smartcampusapi\mapper\LinkedResourceNotFoundExceptionMapper.class
 com\mycompany\csa_cw_smartcampusapi\exceptions\SensorUnavailableException.class
 com\mycompany\csa_cw_smartcampusapi\mapper\ResourceNotFoundExceptionMapper.class
+com\mycompany\csa_cw_smartcampusapi\filter\LoggingFilter.class
 com\mycompany\csa_cw_smartcampusapi\resources\SensorReading.class
 com\mycompany\csa_cw_smartcampusapi\mapper\RoomNotEmptyExceptionMapper.class
 com\mycompany\csa_cw_smartcampusapi\mapper\GlobalExceptionMapper.class
 com\mycompany\csa_cw_smartcampusapi\service\DataStore.class
 com\mycompany\csa_cw_smartcampusapi\exceptions\ResourceNotFoundException.class
-com\mycompany\csa_cw_smartcampusapi\mapper\LoggingFilter.class
 com\mycompany\csa_cw_smartcampusapi\resources\SensorResource.class
 com\mycompany\csa_cw_smartcampusapi\resources\RootResource.class
 com\mycompany\csa_cw_smartcampusapi\resources\SensorReadingResource.class
