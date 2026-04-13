@@ -49,11 +49,11 @@ public class RoomResource {
     @POST
     public Response createRoom(Room room) {
         
-        DataStore.rooms.put(room.getId(), room);
-        
         if (DataStore.rooms.containsKey(room.getId())) {
             throw new DuplicateResourceException("Room with this ID already exists");
         }
+        
+        DataStore.rooms.put(room.getId(), room);
         
         return Response.status(Response.Status.CREATED).entity(room).build();
     }
