@@ -20,30 +20,20 @@ import javax.ws.rs.core.MediaType;
 @Path("/")
 @Produces(MediaType.APPLICATION_JSON)
 public class RootResource {
-    
-//    @GET
-//    public Map<String, Object> getInfo() {
-//        
-//        Map<String, Object> response = new HashMap<>();
-//        response.put("version", "v1");
-//        response.put("message", "My Api is Running");
-//        response.put("status", "OK");
-//        return response;
-//    } 
-//    
-//    @GET
-//    public Room testRoom() {
-//    
-//        Room room = new Room("A1","Arena one", 150);
-//        return room;
-//    }
-    
+  
     @GET
-    public Object testStore() {
-        Room room = new Room("B1", "Basketball court one", 200);
-        
-        DataStore.rooms.put(room.getId(), room);
-        
-        return DataStore.rooms.values();
+    public Map<String, Object> getApiInfo() {
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("version", "v1");
+        response.put("adminContact", "admin@smartcampus.local");
+
+        Map<String, String> resources = new HashMap<>();
+        resources.put("rooms", "/api/v1/rooms");
+        resources.put("sensors", "/api/v1/sensors");
+
+        response.put("resources", resources);
+
+        return response;
     }
 }

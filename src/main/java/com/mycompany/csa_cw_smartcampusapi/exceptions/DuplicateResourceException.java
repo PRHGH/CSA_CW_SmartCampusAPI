@@ -1,0 +1,17 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.csa_cw_smartcampusapi.exceptions;
+
+/**
+ *
+ * @author pamin
+ */
+
+public class DuplicateResourceException extends RuntimeException {
+
+    public DuplicateResourceException(String message) {
+        super(message);
+    }
+}

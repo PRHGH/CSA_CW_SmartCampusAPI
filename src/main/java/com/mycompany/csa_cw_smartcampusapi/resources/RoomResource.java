@@ -4,6 +4,8 @@
  */
 package com.mycompany.csa_cw_smartcampusapi.resources;
 
+import com.mycompany.csa_cw_smartcampusapi.exceptions.DuplicateResourceException;
+import com.mycompany.csa_cw_smartcampusapi.exceptions.ResourceNotFoundException;
 import com.mycompany.csa_cw_smartcampusapi.exceptions.RoomNotEmptyException;
 import com.mycompany.csa_cw_smartcampusapi.service.DataStore;
 import com.mycompany.csa_cw_smartcampusapi.models.Room;
@@ -34,14 +36,24 @@ public class RoomResource {
     
     @GET
     @Path("/{id}")
-    public Room getRoom(@PathParam("id") String id) {
-        return DataStore.rooms.get(id);
+    public Response getRoom(@PathParam("id") String id) {
+        
+        Room room = DataStore.rooms.get(id);
+        if(room == null){
+            throw new ResourceNotFoundException("Room not found");
+        }
+        
+        return Response.ok(room).build();
     }
     
     @POST
     public Response createRoom(Room room) {
         
         DataStore.rooms.put(room.getId(), room);
+        
+        if (DataStore.rooms.containsKey(room.getId())) {
+            throw new DuplicateResourceException("Room with this ID already exists");
+        }
         
         return Response.status(Response.Status.CREATED).entity(room).build();
     }

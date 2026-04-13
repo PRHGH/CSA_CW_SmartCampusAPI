@@ -4,6 +4,7 @@
  */
 package com.mycompany.csa_cw_smartcampusapi.resources;
 
+import com.mycompany.csa_cw_smartcampusapi.exceptions.DuplicateResourceException;
 import com.mycompany.csa_cw_smartcampusapi.exceptions.LinkedResourceNotFoundException;
 import com.mycompany.csa_cw_smartcampusapi.models.Room;
 import com.mycompany.csa_cw_smartcampusapi.models.Sensor;
@@ -40,12 +41,36 @@ public class SensorResource {
                 .equalsIgnoreCase(type)).collect(Collectors.toList());
     }
     
+    @GET
+    @Path("/{id}")
+    public Response getSensor(@PathParam("id") String id) {
+        
+        Sensor sensor = DataStore.sensors.get(id);
+        
+        if(sensor == null) {
+            java.util.Map<String, Object> error = new java.util.HashMap<>();
+                    error.put("error", "Not Found");
+                    error.put("message", "Sensor not found");
+                    error.put("status", 404);
+
+            return Response.status(Response.Status.NOT_FOUND)
+                    .entity(error)
+                    .build();
+        }
+        
+        return Response.ok(sensor).build();
+    }
+    
     @POST
     public Response createSensor(Sensor sensor) {
         Room room = DataStore.rooms.get(sensor.getRoomId());
         
         if(room == null) {
             throw new LinkedResourceNotFoundException("Referenced room does not exist");
+        }
+        
+        if (DataStore.sensors.containsKey(sensor.getId())) {
+            throw new DuplicateResourceException("Sensor with this ID already exists");
         }
         
         DataStore.sensors.put(sensor.getId(), sensor);
