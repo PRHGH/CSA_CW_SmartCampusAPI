@@ -6,7 +6,7 @@ package com.mycompany.csa_cw_smartcampusapi.service;
 
 import com.mycompany.csa_cw_smartcampusapi.models.Room;
 import com.mycompany.csa_cw_smartcampusapi.models.Sensor;
-import com.mycompany.csa_cw_smartcampusapi.resources.SensorReading;
+import com.mycompany.csa_cw_smartcampusapi.models.SensorReading;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

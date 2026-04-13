@@ -4,6 +4,7 @@
  */
 package com.mycompany.csa_cw_smartcampusapi.resources;
 
+import com.mycompany.csa_cw_smartcampusapi.models.SensorReading;
 import com.mycompany.csa_cw_smartcampusapi.exceptions.SensorUnavailableException;
 import com.mycompany.csa_cw_smartcampusapi.models.Sensor;
 import com.mycompany.csa_cw_smartcampusapi.service.DataStore;
